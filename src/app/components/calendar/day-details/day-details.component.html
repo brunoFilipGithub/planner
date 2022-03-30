@@ -1,0 +1,14 @@
+<div class="day-details">
+    <button class="button-add" (click)="onAddEvent()">Add event</button>
+    <span class="close" style="font-weight: bold;" (click)="close();">X</span>
+
+    <div class="day-details-title">
+        <br/>
+       <h1>Events</h1> 
+       <h1>{{date.getDate()}}/{{date.getMonth()}}/{{date.getFullYear()}}</h1>
+    </div>
+
+    <div *ngFor="let event of events">
+        <app-event [event]="event"></app-event>
+    </div>
+</div>

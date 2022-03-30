@@ -1,0 +1,17 @@
+<div class="event-div">
+
+    <div class="row event-text">
+        <h1>{{event.event_text}}</h1>
+
+    </div>
+    
+
+        <div class="button-div">
+            <button class="buttonDelete" (click)="onDelete()">Delete</button>
+            <button class="buttonUpdate" (click)="onUpdate()">Update</button>     
+        </div>
+
+        <div class="event-time">
+            <p>{{eventDate.Hours}} : {{eventDate.Minutes}}</p>
+        </div>
+</div>

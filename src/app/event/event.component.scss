@@ -1,0 +1,60 @@
+.event-div {
+    display: block;
+    width: calc(60rem - 4px);
+    height: calc(50rem/5);
+    border: 3px dashed black;
+}
+
+.event-text {
+    height: 50%;
+    padding-top: 1.5rem;
+    padding-left: 2.5rem;
+
+    h1 {
+        font-family: 'Bangers';
+        font-size: 2rem;
+    }
+}
+
+.event-time {
+    display: flex;
+    position: relative;
+
+    p {
+        font-family: 'Bangers';
+        font-size: 3rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 3rem;
+        margin-right: 2rem;
+    }
+}
+
+.buttonDelete {
+    width: 4.5rem;
+    height: 3rem;
+    background-color: red;
+    font-size: 1.3rem;
+    font-family: 'Bangers';
+    margin-bottom: 0.7rem;
+    margin-left: 0.7rem;
+    border-radius: 5px;
+}
+
+.buttonUpdate {
+    width: 4.5rem;
+    height: 3rem;
+    background-color: blue;
+    font-size: 1.3rem;
+    font-family: 'Bangers';
+    margin-bottom: 0.7rem;
+    margin-left: 0.7rem;
+    border-radius: 5px;
+}
+
+.button-div {
+    display: flex;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}

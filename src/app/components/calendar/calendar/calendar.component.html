@@ -1,0 +1,23 @@
+<div class="calendar-div">
+    <div class="calendar-title">
+        <p (click)="prevMonth();">&lt;</p>
+        <h1>{{currentMonth}}</h1>
+        <p (click)="nextMonth();">&gt;</p>
+        <span class="year">{{currentYear}}</span>
+    </div>
+    <div class="calendar-weekdays">
+        <p *ngFor="let weekday of weekdays">{{weekday}}</p>
+    </div> 
+
+    <div class="calendar-body">
+        <app-day *ngFor="let monthDay of prevDays" [day]="monthDay" [isCurrentMonthDay]="false"></app-day>
+
+        <app-day *ngFor="let monthDay of currentDays" (monthDay)="onDaySelected($event)" [day]="monthDay" [isCurrentMonthDay]="true" [containsEvents]="dayContainsEvents(monthDay)"></app-day>
+
+        <app-day *ngFor="let monthDay of nextDays"  [day]="monthDay" [isCurrentMonthDay]="false"></app-day>
+    </div>
+</div>
+
+<span *ngIf="selectedDate != null">
+    <app-day-details (closeDayDetails)="onCloseDayDetails($event)" [date]="selectedDate" [events]="eventsByDate(selectedDate)"></app-day-details>
+</span>
